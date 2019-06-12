@@ -1,5 +1,9 @@
 from django.http import HttpResponse
+from django.shortcuts import render, redirect
 
+def upload(request):
+    return HttpResponse("You're at the upload index.")
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+def home(request):
+    return render(request, 'home.html',
+    {'home': home})
